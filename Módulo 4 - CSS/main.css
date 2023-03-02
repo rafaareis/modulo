@@ -1,3 +1,11 @@
+* {
+    box-sizing: border-box;
+    color: red;
+    margin: 0;
+    padding: 0;
+}
+
+/*
 h1 {
     color: red;  
 }
@@ -13,7 +21,13 @@ h2 {
 .creation-date {
     color: #ccc;
 }
+*/
 
-* {
-    color: red;
+header li {
+    display: inline;
+}
+
+.container {
+    width: 1360px;
+    margin: 0 auto 0 auto;
 }
