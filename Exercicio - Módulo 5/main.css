@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+#contact div{
+    padding-right: 40px;
+    
+}
+
+header {
+    padding: 16px 0;
+    background-color:#878787 ;
+    color: #000000;
+    
+}
+
+header,
+section,
+footer {
+    border: 2px solid #878787;
+}
+
+header,
+section,
+form input,
+form textarea,
+form select,
+form button,
+footer {
+    font-family: 'Sono', sans-serif;
+}
+
+
+header nav li {
+    display: inline;
+    margin-left: 16px;
+    font-size: 18px;
+    
+}
+
+header nav li a {
+    color: #000000;
+    text-decoration: none;  
+}
+
+header nav li a:hover {
+    color: #FFF;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+header .container,
+section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section .container {
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+section h2,
+section h3,
+section h4 {
+    margin-bottom: 16px;
+}
+
+section h2 {
+    text-decoration: underline;
+}
+
+.photo {
+    width: 30%;
+    margin-left: 52px;
+}
+
+#contact .container {
+    display: block;
+}
+
+.formulario-social-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+form input,
+form textarea,
+form select,
+form button {
+    display: block;
+    width: 320px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+form textarea {
+    resize: none;
+    height: 200px;
+}
+
+form button {
+    background-color: #878787;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    color: #fff;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus{
+    outline-color: #878787;  
+}
+
+.social-links img,
+.mensageiros img {
+    height: 50px;
+}
+
+.social-links,
+.mensageiros {
+    margin-bottom: 30px;
+}
+
+.social-links li,  
+.mensageiros li {
+    display: inline;
+    margin-right: 12px;
+}
+
+.social-links li a,
+.mensageiros li a {
+    text-decoration: none;
+}
+
+.social-links li img:hover,
+.mensageiros li img:hover {
+    border: 2px solid #878787;
+    width: 4rem;
+    height: 4rem;
+}
+
+footer {
+    text-align: center;
+    font-weight: bold;
+    background-color: #878787;
+}
