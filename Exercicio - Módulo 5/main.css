@@ -69,10 +69,24 @@ section .container {
     justify-content: space-between;
 }
 
+section a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+section a:hover {
+    color:#878787;
+}
+
 section h2,
 section h3,
 section h4 {
     margin-bottom: 16px;
+}
+
+section p {
+    text-align: justify;
 }
 
 section h2 {
@@ -127,7 +141,8 @@ form select:focus{
 }
 
 .social-links img,
-.mensageiros img {
+.mensageiros img,
+.maps {
     height: 50px;
 }
 
@@ -148,7 +163,8 @@ form select:focus{
 }
 
 .social-links li img:hover,
-.mensageiros li img:hover {
+.mensageiros li img:hover,
+.maps:hover {
     border: 2px solid #878787;
     width: 4rem;
     height: 4rem;
