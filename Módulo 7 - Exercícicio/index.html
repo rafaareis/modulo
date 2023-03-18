@@ -8,21 +8,23 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Maior número</h1>
+    <div class="container" id="container-id">
+        <h1>Preencha o formulário</h1>
         <form id="form-block">
-            <input type="number" required placeholder="Insira o primeiro número" id="numero-a" />
+            <input type="number" required placeholder="Insira o primeiro número" id="numero-a" min="0" />
             <hr>
-            <input type="number" required placeholder="Insira o segundo-numero" id="numero-b" />
-            <p class="error-message">
-                O segundo número está menor que o primeiro
+            <input type="number" required placeholder="Insira o segundo-numero" id="numero-b" min="0" />
+            <hr>
+            <button type="submit" id="btn-comparar">Enviar</button>
+            <p class="success-message">
+                O formulário está válido
             </p>
-            <hr>
-            <button type="submit" id="btn-comparar">Fazer a Comparação</button>
+            <p class="error-message">
+                O formulário está inválido
+            </p>
         </form>
-        <p class="success-message">
-            O formulário está válido
-        </p>
+
+
     </div>
 </body>
 <script src="./main.js"></script>
