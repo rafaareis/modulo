@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de contatos</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header-a">
+            <div class="div-header-a">
+                <img src="./images/icone-de-contatos.png" alt="Foto do Ícone de Contato">
+                <h2>Agenda de Contatos</h2>
+            </div>
+            <div class="div-header-b">
+                <h2 id="numeros-cadastrados">Total de contatos cadastrados: 0</h2>
+            </div>
+        </header>
+        <form id="form-contato">
+            <input type="text" placeholder="Nome do Contato" id="nome-contato" />
+            <input type="number" placeholder="DDI" id="ddi-contato" min="1" max="99" required />
+            <input type="number" placeholder="DDD" id="ddd-contato" min="11" max="99" required />
+            <input type="number" placeholder="Digite o número de Telefone" id="numero-contato" required />
+            <button type="submit">Adicionar</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome do Contato</th>
+                    <th>DDI</th>
+                    <th>DDD</th>
+                    <th>Número de Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Rafael de Alvarenga Reis</th>
+                    <th>+55</th>
+                    <th>(11)</th>
+                    <th>998203994</th>
+                    <th>
+                    <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=998203994" target="_blank">
+                        <img src="images/whatsapp.png" alt="Link do WhatsApp" />
+                    </a>
+                    </th>
+                    <th>
+                    <button type="submit">x</button>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
