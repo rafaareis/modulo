@@ -5,7 +5,8 @@
 }
 
 body {
-    background-color: #f9f9fa;
+
+    background-color: #278ca85f;
     padding-top: 100px;
 }
 
@@ -32,5 +33,94 @@ header {
     margin-right: 16px;
 }
 
+.div-header-b h2 {
+    font-size: 24px;
+}
 
+
+form {
+    display: flex;
+    max-width: 960px;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 76px;
+}
+
+form input {
+    font-size: 24px;
+    background-color: #fff;    
+    padding: 8px;
+    width: 90px;
+    border: none;
+}
+
+form input:hover {
+    border-bottom: 5px solid #000;
+}
+
+form button {
+    background-color: #6f876fde;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+form button:hover {
+    background-color: #fff;
+    color: #6f876fde;
+}
+
+#nome-contato {
+    width: 210px;
+}
+
+#numero-contato {
+    width: 350px;
+}
+
+table {
+    width: 100%;
+}
+
+table th {
+    border-bottom: 1px solid #000;
+    padding: 16px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+table td {
+    padding: 8px;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 1px solid #000;
+}
+
+table td img {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    
+}
+
+table td img:hover {
+    border-bottom: 1px solid #000;
+}
+
+table td button {
+    display: flex;
+    align-items: center;
+    background-color: #6f876fde;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+}
+
+table td button:hover {
+    background-color: #fff;
+    color: #6f876fde;
+}
 

@@ -18,39 +18,40 @@
                 <h2 id="numeros-cadastrados">Total de contatos cadastrados: 0</h2>
             </div>
         </header>
-        <form id="form-contato">
-            <input type="text" placeholder="Nome do Contato" id="nome-contato" />
-            <input type="number" placeholder="DDI" id="ddi-contato" min="1" max="99" required />
-            <input type="number" placeholder="DDD" id="ddd-contato" min="11" max="99" required />
-            <input type="number" placeholder="Digite o número de Telefone" id="numero-contato" required />
-            <button type="submit">Adicionar</button>
-        </form>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome do Contato</th>
-                    <th>DDI</th>
-                    <th>DDD</th>
-                    <th>Número de Telefone</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>Rafael de Alvarenga Reis</th>
-                    <th>+55</th>
-                    <th>(11)</th>
-                    <th>998203994</th>
-                    <th>
-                    <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=998203994" target="_blank">
-                        <img src="images/whatsapp.png" alt="Link do WhatsApp" />
-                    </a>
-                    </th>
-                    <th>
-                    <button type="submit">x</button>
-                    </th>
-                </tr>
-            </tbody>
-        </table>
+        <article>
+            <form id="form-contato">
+                <input type="text" placeholder="Nome do Contato" id="nome-contato" />
+                <input type="number" placeholder="DDI" id="ddi-contato" min="1" max="99" required />
+                <input type="number" placeholder="DDD" id="ddd-contato" min="11" max="99" required />
+                <input type="text" placeholder="Digite o número de Telefone" id="numero-contato" required />
+                <button class="add-btn" type="submit">Adicionar +</button>
+            </form>    
+            <table id="tabela-contato" cellspacing="0" >
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nome do Contato</th>
+                        <th>DDI</th>
+                        <th>DDD</th>
+                        <th>Número de Telefone</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="linha-contato">
+                        <td class="id-contato"><b>--</b></td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                </tbody>
+            </table>     
+        </article>
     </div>
+    <script src="./main.js"></script>
 </body>
 </html>
