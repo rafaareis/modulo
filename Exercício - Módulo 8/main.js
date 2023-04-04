@@ -1,20 +1,26 @@
 const form = document.getElementById('form-contato')
-console.log(form)
+//console.log(form)
 const linhaContato = document.querySelector('.id-contato');
-console.log(linhaContato);
+//console.log(linhaContato);
+
 
 const inputNomeContato = document.querySelector('#nome-contato');
 const inputDdi = document.querySelector('#ddi-contato');
 const inputDdd = document.querySelector('#ddd-contato');
 const inputNumeroContato = document.querySelector('#numero-contato');
-const tabelaContato = document.querySelector("#tabela-contato");
 
-const contatos = [];
 const ddis = [];
 const ddds = [];
 const numeros = [];
 
-const numerosRemovidos = 0;
+const tabelaContato = document.querySelector("#tabela-contato");
+const h2ContatosCadastrados = document.querySelector('#numeros-cadastrados');
+const quant = 0;
+//console.log(quant);
+
+const contatos = [];
+
+
 
 
 console.log(numeros.length);
@@ -26,52 +32,60 @@ form.addEventListener('submit', function(e) {
     contatosCadastrados();
     adicionaLinha();
     atualizaTabela();
+    totalDeLinhas();
 });
 
 
 
 function contatosCadastrados() {
-    const h2ContatosCadastrados = document.querySelector('#numeros-cadastrados');
-    numeros.push(inputNumeroContato.value);
-    h2ContatosCadastrados.innerHTML = `<h2 id="numeros-cadastrados">Total de contatos cadastrados: ${numeros.length}</h2>`
+    
+    
+    h2ContatosCadastrados.innerHTML = `<h2 id="numeros-cadastrados">Total de contatos cadastrados: ${quant}</h2>`
 }
 
 function adicionaLinha() {
 
 
-    contatos.push(inputNomeContato.value);
-    ddis.push(parseFloat(inputDdi.value));
-    ddds.push(parseFloat(inputDdd.value));
-    // numeros.push(inputNumeroContato.value);
 
+    if (numeros.includes((inputDdi.value)+(inputDdd.value)+(inputNumeroContato.value))) {
+        alert(`O número de telefone ${inputDdi.value}${inputDdd.value}${inputNumeroContato.value} já foi inserido`);
 
+        inputDdi.value = '';
+        inputDdd.value = '';
+        inputNumeroContato.value = '';
 
-
-    console.log(numeros.length);
-    console.log(numeros);
-
-    let linha = `<tr class=${inputNumeroContato.value} >`;
-    linha += `<td>${numeros.length}</td>`;
-    linha += `<td>${inputNomeContato.value}</td>`;
-    linha += `<td>+${inputDdi.value}</td>`;
-    linha += `<td>${inputDdd.value}</td>`;
-    linha += `<td>${inputNumeroContato.value}</td>`;
-    linha += `<td>`;
-    linha += `<a class="whatsapp-link" href=`+`https://web.whatsapp.com/send?phone=${inputDdi.value}${inputDdd.value}${inputNumeroContato.value} >`;
-    linha += `<img src="images/whatsapp.png" alt="Link do WhatsApp" />`;
-    linha += `</a>`;
-    linha += `</td>`;
-    linha += `<td>`;
-    linha += `<button class="deletaLinha">x</button>`;
-    linha += `</td>`;
-    linha += `</tr>`;
-
-    linhas += linha;
-
-    inputNomeContato.value = '';
-    inputDdi.value = '';
-    inputDdd.value = '';
-    inputNumeroContato.value = '';
+    } else {
+        numeros.push(inputDdi.value + inputDdd.value + inputNumeroContato.value);
+        contatos.push(inputNomeContato.value);
+        ddis.push(parseFloat(inputDdi.value));
+        ddds.push(parseFloat(inputDdd.value));
+    
+        console.log(numeros.length);
+        console.log(numeros);
+    
+        let linha = `<tr class="linha-contato" >`;
+        linha += `<td>${inputNomeContato.value}</td>`;
+        linha += `<td>+${inputDdi.value}</td>`;
+        linha += `<td>${inputDdd.value}</td>`;
+        linha += `<td>${inputNumeroContato.value}</td>`;
+        linha += `<td>`;
+        linha += `<a class="whatsapp-link" href=`+`https://web.whatsapp.com/send?phone=${inputDdi.value}${inputDdd.value}${inputNumeroContato.value} >`;
+        linha += `<img src="images/whatsapp.png" alt="Link do WhatsApp" />`;
+        linha += `</a>`;
+        linha += `</td>`;
+        linha += `<td>`;
+        linha += `<button class="${inputNumeroContato.value} deletaLinha">x</button>`;
+        linha += `</td>`;
+        linha += `</tr>`;
+    
+        linhas += linha;
+    
+        inputNomeContato.value = '';
+        inputDdi.value = '';
+        inputDdd.value = '';
+        inputNumeroContato.value = '';
+    
+    }
 }
 
 function atualizaTabela() {
@@ -80,21 +94,29 @@ function atualizaTabela() {
 }
 
 tabelaContato.addEventListener('click', function(e) {
-    //console.log('fui clicado');
     let elementoClicado = e.target
     console.log(elementoClicado);
+    //let telefone = elementoClicado.classList[0];
+    //console.log(telefone);
+
+    //numeros.splice(numeros.indexOf(telefone), 1)
+    //console.log(numeros);
+
 
     if(elementoClicado.classList.contains("deletaLinha")) {
         let linhaRemovida = elementoClicado.parentNode.parentNode.remove();
-        
-        
+        totalDeLinhas();
     }
-    let rem = 0;
-    rem++;
-    console.log(rem);
-
-
-    
 });
+
+
+function totalDeLinhas(quant) {
+    const linhaContatoAll = document.querySelectorAll(".linha-contato");
+    console.log(linhaContatoAll);
+    quant = linhaContatoAll.length;
+    h2ContatosCadastrados.innerHTML = `<h2 id="numeros-cadastrados">Total de contatos cadastrados: ${quant}</h2>`
+    console.log(quant);
+}
+
 
 
